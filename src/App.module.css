@@ -1,0 +1,128 @@
+/* General Styling */
+.container {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #4a90e2, #8e44ad);
+  color: white;
+  min-height: 100vh;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+/* Header */
+.header {
+  padding: 40px 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+.mentorImage {
+  width: 100%;
+  max-width: 200px;  /* Adjust as needed */
+  border-radius: 8px; /* Optional: for rounded corners */
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* About Section */
+.about {
+  font-size: 1.2rem;
+  margin: 20px auto;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* Features */
+.features {
+  padding: 40px 20px;
+}
+
+.features h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 1.8rem;
+  color: #4a90e2;
+}
+
+/* Contact Section */
+.contact {
+  padding: 40px 20px;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.whatsappButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #25d366;
+  color: white;
+  font-size: 1.2rem;
+  padding: 12px 20px;
+  border-radius: 30px;
+  margin-top: 20px;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out;
+}
+
+.whatsappButton:hover {
+  background: #1ebe5d;
+}
+
+.guessPaper {
+  font-size: 1.1rem;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 0.9rem;
+  background: rgba(0, 0, 0, 0.2);
+}
