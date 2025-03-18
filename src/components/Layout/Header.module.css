@@ -1,11 +1,53 @@
 /* src/components/Layout/Header.module.css */
 .header {
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   position: fixed;
-  width: 100%;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.topBar {
+  background-color: #2a4365;
+  padding: 0.5rem 0;
+  color: white;
+}
+
+.contactInfo {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+.contactLink,
+.whatsappLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: opacity 0.2s ease;
+}
+
+.contactLink:hover,
+.whatsappLink:hover {
+  opacity: 0.8;
+}
+
+.whatsappLink {
+  color: #25D366;
 }
 
 .nav {
@@ -18,75 +60,131 @@
 }
 
 .logo {
+  text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
   color: #2a4365;
-  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.navLinks {
+.desktopNav {
   display: flex;
+  align-items: center;
   gap: 2rem;
 }
 
-.navLinks a {
-  color: #2d3748;
+.navLink {
   text-decoration: none;
+  color: #4a5568;
   font-weight: 500;
-  transition: color 0.2s;
+  position: relative;
+  transition: color 0.2s ease;
 }
 
-.navLinks a:hover {
-  color: #4299e1;
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #4299e1;
+  transition: width 0.2s ease;
+}
+
+.navLink:hover,
+.navLink.active {
+  color: #2a4365;
+}
+
+.navLink:hover::after,
+.navLink.active::after {
+  width: 100%;
+}
+
+.enrollButton,
+.mobileEnrollButton {
+  background-color: #4299e1;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.enrollButton:hover {
+  background-color: #3182ce;
 }
 
 .menuButton {
   display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #2a4365;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.mobileNav {
+  display: none;
 }
 
 @media (max-width: 768px) {
+  .topBar {
+    display: none;
+  }
+
+  .desktopNav {
+    display: none;
+  }
+
   .menuButton {
+    display: block;
+  }
+
+  .mobileNav {
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 4px;
-  }
-
-  .menuButton span {
-    width: 25px;
-    height: 2px;
-    background-color: #2a4365;
-    transition: all 0.3s;
-  }
-
-  .menuButton.open span:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
-  }
-
-  .menuButton.open span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menuButton.open span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-  }
-
-  .navLinks {
-    display: none;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 80px;
     left: 0;
     right: 0;
-    background-color: white;
-    flex-direction: column;
+    background: white;
     padding: 1rem;
-    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
-  .navLinks.show {
-    display: flex;
+  .mobileNavLink {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: #4a5568;
+    font-weight: 500;
+    border-bottom: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+  }
+
+  .mobileNavLink:hover,
+  .mobileNavLink.active {
+    color: #2a4365;
+    background-color: #f7fafc;
+  }
+
+  .mobileEnrollButton {
+    margin: 1rem;
+    text-align: center;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .header,
+  .navLink::after {
+    transition: none;
   }
 }
