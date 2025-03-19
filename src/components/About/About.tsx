@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGraduationCap, FaChartLine, FaUsers, FaClock } from 'react-icons/fa';
 import styles from './About.module.css';
-import mentorImage from '../../assets/Praveen.png';
+import mentorImage from '../../assets/images/mentors/Praveen.png';
 
 const stats = [
   { icon: <FaGraduationCap />, value: '30+', label: 'Years Experience' },
@@ -13,12 +13,14 @@ const stats = [
 ];
 
 const expertise = [
+  'Commerce',
   'Accounts',
   'Economics',
   'Business Studies',
   'CA Foundation',
   'CS Foundation',
-  'CUET'
+  'CUET',
+  'Law'
 ];
 
 const About: React.FC = () => {
@@ -60,7 +62,7 @@ const About: React.FC = () => {
           >
             <img 
               src={mentorImage} 
-              alt="Praveen Goel - Commerce Expert"
+              alt="Praveen Goel - Lord of Commerce"
               className={styles.mentorImage}
             />
           </motion.div>
@@ -71,7 +73,7 @@ const About: React.FC = () => {
             transition={{ delay: 0.4 }}
           >
             <h2>Praveen Goel</h2>
-            <h3>India's No.1 Commerce Mentor</h3>
+            <h3>Lord of Commerce</h3>
             <p>
               With over three decades of experience in commerce education, 
               Praveen Goel has established himself as a leading authority in 

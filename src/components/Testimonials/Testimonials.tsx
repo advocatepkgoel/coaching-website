@@ -3,13 +3,16 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaChevronLeft, FaChevronRight, FaQuoteLeft } from 'react-icons/fa';
 import styles from './Testimonials.module.css';
+import defaultAvatar from '../../assets/images/testimonials/default-avatar.svg';
+import maleAvatar from '../../assets/images/testimonials/male.svg';
+import femaleAvatar from '../../assets/images/testimonials/female.svg';
 
 const testimonials = [
   {
     id: 1,
     name: "Priya Sharma",
     role: "CA Final Student",
-    image: "/images/testimonial1.jpg", // You can add default avatar images
+    image: femaleAvatar, // You can add default avatar images
     quote: "Thanks to this coaching institute, I scored 95% in Accounts. The faculty's approach to complex topics made learning enjoyable and effective.",
     score: "95% in Accounts",
     background: "#c6f6d5",
@@ -19,7 +22,7 @@ const testimonials = [
     id: 2,
     name: "Rahul Verma",
     role: "CS Foundation",
-    image: "/images/testimonial2.jpg",
+    image: maleAvatar,
     quote: "The personalized attention and detailed study materials helped me crack CS Foundation in my first attempt. Best commerce coaching in Delhi!",
     score: "AIR 15",
     background: "#feebc8",
@@ -29,7 +32,7 @@ const testimonials = [
     id: 3,
     name: "Aisha Patel",
     role: "Class XII Student",
-    image: "/images/testimonial3.jpg",
+    image: femaleAvatar,
     quote: "I improved my Economics score from 75% to 98% in just three months. The practical examples and case studies really helped understand concepts better.",
     score: "98% in Economics",
     background: "#e9d8fd",
@@ -39,7 +42,7 @@ const testimonials = [
     id: 4,
     name: "Arjun Singh",
     role: "B.Com Graduate",
-    image: "/images/testimonial4.jpg",
+    image: maleAvatar,
     quote: "The CUET preparation program was excellent. The mock tests and problem-solving sessions were invaluable for my preparation.",
     score: "99.8 percentile in CUET",
     background: "#fed7d7",
@@ -130,7 +133,7 @@ const Testimonials: React.FC = () => {
                       alt={testimonials[currentIndex].name}
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
-                        target.src = '/images/default-avatar.png'; // Fallback image
+                        target.src = defaultAvatar; // Fallback image
                       }}
                     />
                   </div>
