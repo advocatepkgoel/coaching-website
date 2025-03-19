@@ -3,13 +3,21 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaGraduationCap, FaClock, FaUsers, FaStar } from 'react-icons/fa';
 import styles from './Courses.module.css';
+import accountancyImage from '../../assets/images/courses/accountancy.webp';
+import businessStudiesImage from '../../assets/images/courses/businessStudies.webp';
+import economicsImage from '../../assets/images/courses/economics.jpg';
+import caFoundationImage from '../../assets/images/courses/caFoundation.webp';
+import csFoundationImage from '../../assets/images/courses/csFoundation.jpg';
+import cuetImage from '../../assets/images/courses/cuet.jpg';
+import lawImage from '../../assets/images/courses/law.jpg';
 
 const courseCategories = [
   "All Courses",
   "Class XI-XII",
   "CA Foundation",
   "CS Foundation",
-  "CUET Preparation"
+  "CUET Preparation",
+  "Law"
 ];
 
 const coursesData = [
@@ -27,7 +35,7 @@ const coursesData = [
     duration: "1 Year",
     batchSize: "30 students",
     rating: 4.9,
-    image: "/images/accountancy.jpg",
+    image: accountancyImage,
     highlights: [
       "100% success rate",
       "Expert faculty",
@@ -49,7 +57,7 @@ const coursesData = [
     duration: "1 Year",
     batchSize: "30 students",
     rating: 4.8,
-    image: "/images/business-studies.jpg",
+    image: businessStudiesImage,
     highlights: [
       "Current affairs integration",
       "Industry examples",
@@ -71,7 +79,7 @@ const coursesData = [
     duration: "1 Year",
     batchSize: "30 students",
     rating: 4.9,
-    image: "/images/economics.jpg",
+    image: economicsImage,
     highlights: [
       "Real market examples",
       "Statistical analysis",
@@ -93,7 +101,7 @@ const coursesData = [
     duration: "6 Months",
     batchSize: "25 students",
     rating: 4.9,
-    image: "/images/ca-foundation.jpg",
+    image: caFoundationImage,
     highlights: [
       "Exam-oriented approach",
       "Regular assessment",
@@ -115,7 +123,7 @@ const coursesData = [
     duration: "6 Months",
     batchSize: "25 students",
     rating: 4.8,
-    image: "/images/cs-foundation.jpg",
+    image: csFoundationImage,
     highlights: [
       "Strategic approach",
       "Regular practice",
@@ -137,11 +145,33 @@ const coursesData = [
     duration: "4 Months",
     batchSize: "30 students",
     rating: 4.9,
-    image: "/images/cuet.jpg",
+    image: cuetImage,
     highlights: [
       "Exam pattern focus",
       "Regular assessment",
       "Performance analysis",
+      "Study material"
+    ]
+  },
+  {
+    id: 7,
+    title: "Law",
+    category: "Law",
+    description: "Comprehensive preparation for Law syllabus with focus on critical thinking and case studies.",
+    features: [
+      "Theory with case studies",
+      "Mock tests",
+      "Previous year papers",
+      "Expert guidance"
+    ],
+    duration: "1 Year",
+    batchSize: "30 students",
+    rating: 4.9,
+    image: lawImage,
+    highlights: [
+      "Critical thinking",
+      "Case study analysis",
+      "Regular practice",
       "Study material"
     ]
   }
