@@ -20,6 +20,7 @@ const App: React.FC = () => {
       <section className={styles.about}>
         <p>ACCOUNTANCY, ECO, BUSINESS STUDIES, LAW (GET 100% at Rs. 875/-)</p>
         <p>(XI, XII, B.COM, CUET, CA / CS FOUNDATION)</p>
+        <p>CA FOUNDATION/CS ENTRANCE (CSEET)</p>
       </section>
 
       {/* Special Features */}
@@ -28,8 +29,8 @@ const App: React.FC = () => {
         <div className={styles.grid}>
           {[
             { icon: <FaGraduationCap />, text: "ACCOUNTANCY + ECO + BUSINESS STUDIES (ALL AT RS. 875)" },
-            { icon: <FaBook />, text: "SCORE 100%" },
-            { icon: <FaChalkboardTeacher />, text: "FREE TRIAL CLASSES" },
+            { icon: <FaBook />, text: "SCORE 100% AND FREE TRIAL CLASSES" },
+            { icon: <FaChalkboardTeacher />, text: "ASSURED LLB OR FEE BACK (COMPLETE: COLLEGE TO COURT)" },
             { icon: <FaBook />, text: "LEARN IN 15 MINUTES THROUGH CODING TECH." },
             { icon: <FaChalkboardTeacher />, text: "ONLINE / OFFLINE / REGULAR / PATRACHAR" },
             { icon: <FaGraduationCap />, text: "PREDICTOR OF EXAM QUESTIONS / DAILY TEST" },
