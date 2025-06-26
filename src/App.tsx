@@ -19,8 +19,7 @@ const App: React.FC = () => {
       {/* About Section */}
       <section className={styles.about}>
         <p>ACCOUNTANCY, ECO, BUSINESS STUDIES, LAW (GET 100% at Rs. 875/-)</p>
-        <p>(XI, XII, B.COM, CUET, CA / CS FOUNDATION)</p>
-        <p>CA FOUNDATION/CS ENTRANCE (CSEET)</p>
+        <p>(XI, XII, B.COM, CUET, CA FOUNDATION, CS ENTRANCE [CSEET])</p>
       </section>
 
       {/* Special Features */}
